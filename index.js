@@ -2,6 +2,9 @@
 const express = require('express');
 const morgan = require('morgan');
 
+require('dotenv').config();
+require('./libs/dbConnect');
+
 const app = express();
 
 const path = require('path'); 
