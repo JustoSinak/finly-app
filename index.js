@@ -4,6 +4,7 @@ const morgan = require('morgan');
 
 const app = express();
 
+const path = require('path'); 
 app.set('views', path.join(__dirname, 'views')); // Ensure this points to the correct views folder
 app.set('view engine', 'ejs');
 
