@@ -5,8 +5,11 @@
         "src": "index.js",
         "use": "@vercel/static-build",
         "config": {
-          "minify": true
+          "minify": true,
+          "config": {
+        "minify": true
         }
+    } 
       }
     ],
     "routes": [
