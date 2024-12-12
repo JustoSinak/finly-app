@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "name": "my-project",
     "builds": [
       {
         "src": "tailwind.css",
@@ -13,7 +12,10 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "index.html"
+        "dest": "index.js"
       }
-    ]
+    ],
+    "env": {
+        "NODE_ENV": "development"
+      }
   }
