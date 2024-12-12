@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "name": "my-project",
+    "builds": [
+      {
+        "src": "tailwind.css",
+        "use": "@vercel/static-build",
+        "config": {
+          "minify": true
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "index.html"
+      }
+    ]
+  }
