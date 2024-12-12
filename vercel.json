@@ -5,20 +5,8 @@
         "src": "index.js",
         "use": "@vercel/static-build",
         "config": {
-          "minify": true,
-          "config": {
-        "minify": true
+          "minify": true
         }
-    } 
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "index.js"
-      }
-    ],
-    "env": {
-        "NODE_ENV": "development"
-      }
+    ]
   }
