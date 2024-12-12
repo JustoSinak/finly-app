@@ -18,8 +18,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(morgan('dev'));
 
-app.use('/users', userRouter);
-
 app.get('/', (req, res) => {
     res.render('index', { message: 'Hello From Node.js' });
 });
