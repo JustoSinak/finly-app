@@ -6,7 +6,7 @@ const {
 } = require('../controllers/user.controller');
 
 router.get('/', (req, res) => {
-  res.render('pages/index', { title: 'Finly' });
+  res.render('index', { title: 'Finly' });
 });
 
 router.get('/signup', (req, res) => {
