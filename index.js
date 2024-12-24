@@ -44,6 +44,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const session = require('express-session');
+const flash = require('connect-flash');
 
 require('dotenv').config();
 require('./libs/dbConnect');
@@ -67,11 +68,10 @@ app.use(
     resave: false,
   })
 );
+
+app.use(flash());
 // console.log(path.join(__dirname, 'views'));
 app.use('/', userRouter);
-// app.get('/', (req, res) => {
-//   res.render('index', { title: 'Finly' });
-// });
 app.use('/dashboard', dashboardRouter);
 
 app.get('*', (req, res) => {
