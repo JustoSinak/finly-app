@@ -8,6 +8,7 @@ require('./libs/dbConnect');
 
 const userRouter = require('./routes/user.route');
 const dashboardRouter = require('./routes/dashboard.route');
+const { verifyUser } = require('./libs/middleware');
 
 const app = express();
 
@@ -29,7 +30,7 @@ app.use(
 app.use(flash());
 // console.log(path.join(__dirname, 'views'));
 app.use('/', userRouter);
-app.use('/dashboard', dashboardRouter);
+app.use('/dashboard',verifyUser, dashboardRouter);
 
 app.get('*', (req, res) => {
   res.status(404).render('index', { message: 'Not Found' });
